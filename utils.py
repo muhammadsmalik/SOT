@@ -11,14 +11,14 @@ from scipy.optimize import linear_sum_assignment as linear_assignment
 
 from models.wrn_mixup_model import wrn28_10
 from models.resnet12 import Res12
-from datasets import MiniImageNet, CIFAR, CUB
+from datasets import MiniImageNet, CIFAR, CUB, SeedFS
 from datasets.samplers import CategoriesSampler
 from methods import PTMAPLoss, ProtoLoss
 from self_optimal_transport import SOT
 
 
 models = dict(wrn=wrn28_10, resnet12=Res12)
-datasets = dict(miniimagenet=MiniImageNet, cifar=CIFAR)
+datasets = dict(miniimagenet=MiniImageNet, cifar=CIFAR, seed_fs=SeedFS)
 methods = dict(pt_map=PTMAPLoss, pt_map_sot=PTMAPLoss, proto=ProtoLoss, proto_sot=ProtoLoss, )
 
 
