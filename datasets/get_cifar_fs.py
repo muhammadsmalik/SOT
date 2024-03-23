@@ -8,6 +8,8 @@ Run this file as follows:
     python get_cifarfs.py
 """
 
+# datasets/get_cifar_fs.py
+
 import pickle
 import os
 import numpy as np
@@ -110,7 +112,7 @@ for datatype in ['train', 'val', 'test']:
         else:
             cur_dir = os.path.join('cifar-fs', datatype)
             os.makedirs(cur_dir, exist_ok=True)
-            os.system('mv images/' + img_class + ' ' + cur_dir)
+            shutil.move(os.path.join('images', img_class), cur_dir)
 
 print("Removing original CIFAR 100 images")
 shutil.rmtree('images', ignore_errors=True)

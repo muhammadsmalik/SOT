@@ -134,3 +134,9 @@ wandb/
 experiment_figs/
 commands.txt
 main_ablation.py
+
+
+# datasets
+datasets/cifar-fs/
+datasets/cifar-fs-splits/
+datasets/seed_fs/

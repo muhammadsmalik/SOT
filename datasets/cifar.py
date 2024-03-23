@@ -1,3 +1,4 @@
+# datasets/cifar.py
 import os.path as osp
 from PIL import Image
 import os
